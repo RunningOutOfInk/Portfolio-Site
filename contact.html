@@ -3,26 +3,43 @@
 <head>
   <meta charset="utf-8">
   <title>Erin Nienhuis - Portfolio</title>
-  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 </head>
 
 <body>
-  <img src="http://via.placeholder.com/200x70" alt="logo" >
-  <nav>
-    <ul>
-      <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <a href="about.html">About</a>
-      </li>
-      <li>
-        <a href="contact.html">Contact</a>
-      </li>
-    </ul>
-  </nav>
+  <header>
+    <img src="http://via.placeholder.com/200x70" alt="Placeholder Logo" >
+    <nav role="menubar">
+      <ul>
+        <li role="presentation">
+          <a href="index.html" role="menuitem">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem">About</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <h1>Contact</h1>
+
+<form action="" method="post" id="contact-form">
+  <label for="contact-email" class="standard-label">Email:</label>
+  <input type="email" value="" id="contact-email" required>
+
+  <label for="contact-phone" class="standard-label">Telephone:</label>
+  <input type="tel" value="" id="contact-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+
+  <label for="contact-message" class="standard-label">Message:</label>
+  <textarea id="contact-message" maxlength="240" required></textarea>
+
+  <input type="submit" value="Send message">
+
+</form>
+
 
   <div>
     Erin Nienhuis<br>
@@ -40,6 +57,10 @@
     <img src="img/twitter_icon.svg" alt="Twitter">
     <img src="img/linkedin_icon.svg" alt="LinkedIn">
   </footer>
+
+  <script type="text/javascript" src="js/tota11y.min.js"></script>
+
+  </script>
 </body>
 
 </html>
