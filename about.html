@@ -4,21 +4,25 @@
   <meta charset="utf-8">
   <title>Erin Nienhuis - Portfolio</title>
   <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Merriweather:300|Roboto:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
   <header>
     <img src="http://via.placeholder.com/200x70" alt="Placeholder Logo" >
-    <nav role="menubar">
-      <ul>
+    <nav>
+      <ul role="menubar" class="navigation-list">
         <li role="presentation">
-          <a href="index.html" role="menuitem">Home</a>
+          <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item">Home</a>
         </li>
         <li role="presentation">
-          <a href="about.html" role="menuitem">About</a>
+          <a href="about.html" role="menuitem" aria-label="About Erin Nienhuis" class="navigation-list__item">About</a>
         </li>
         <li role="presentation">
-          <a href="contact.html" role="menuitem">Contact</a>
+          <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
         </li>
       </ul>
     </nav>

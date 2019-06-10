@@ -4,21 +4,26 @@
   <meta charset="utf-8">
   <title>Erin Nienhuis - Portfolio</title>
   <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Merriweather:300|Roboto:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
   <header>
     <img src="http://via.placeholder.com/200x70" alt="Placeholder Logo" >
-    <nav role="menubar">
-      <ul>
+    <h1>Erin Nienhuis</h1>
+    <nav>
+      <ul role="menubar" class="navigation-list">
         <li role="presentation">
-          <a href="index.html" role="menuitem">Home</a>
+          <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
         </li>
         <li role="presentation">
-          <a href="about.html" role="menuitem">About</a>
+          <a href="about.html" role="menuitem" aria-label="About Erin Nienhuis" class="navigation-list__item">About</a>
         </li>
         <li role="presentation">
-          <a href="contact.html" role="menuitem">Contact</a>
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
         </li>
       </ul>
     </nav>
@@ -26,12 +31,21 @@
 
   <div>
     <img src="http://via.placeholder.com/150x150" alt="">
-    <h1>Hello World!</h1>
+    <h2>My name is Erin Nienhuis.</h2>
     <p>
-      My name is Erin Nienhuis. I am a <span>web</span> developer from mid-Michigan.
+        I am a <span>web</span> developer from mid-Michigan.
     </p>
     <a href="">Check out some of my code.</a>
   </div>
+
+  <h3>More About Me</h3>
+  <p>Gibbet scallywag knave aft belay hearties six pounders hornswaggle haul wind gabion. Stern quarterdeck careen pink belay mizzenmast piracy bounty measured fer yer chains grapple. Warp Gold Road bilge jib grog blossom splice the main brace spanker marooned starboard blow the man down.</p>
+  <p>Clap of thunder Davy Jones' Locker hornswaggle list bounty swing the lead Barbary Coast weigh anchor bring a spring upon her cable no prey, no pay. Quarter black jack parrel keelhaul scuppers Sail ho lookout run a shot across the bow hogshead execution dock. Red ensign main sheet bilge bounty warp loaded to the gunwalls nipper Pirate Round brigantine deadlights.</p>
+  <p>Careen case shot chase guns Chain Shot furl draft six pounders deadlights clap of thunder quarterdeck. Measured fer yer chains lugsail bounty code of conduct splice the main brace aft red ensign pinnace coxswain bilged on her anchor. Gibbet strike colors long boat tack no prey, no pay careen brig lugger booty provost.</p>
+
+  <a href="#">Default Link</a>
+  <button type="button">Default Button</button>
+  <button type="button" class="button__secondary">Secondary Button</button>
 
   <footer>
     <p>Find me on</p>

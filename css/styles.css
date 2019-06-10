@@ -1,0 +1,83 @@
+/*
+Style Inspiration--
+
+Colors:
+Primary link color: #425153
+Background color: #dddddd
+#83b5d7
+#0080bb
+Hover color? #1c4188
+
+Fonts:
+Lora (heading) + Raleway (body)
+Merriweather + Raleway
+Raleway + Roboto
+*/
+
+body {
+  background-color: #ddd;
+  font-size: 16px;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  font-variant: small-caps;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  color: #425153;
+}
+
+a:visited {
+  color: #1c4188;
+}
+/* a:hover comes after a:visited  */
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* a:active comes after a:hover  */
+a:active {
+  color: #0080bb;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  background-color: #425153;
+  color: #ddd;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+button:hover, button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: #00476a;
+  color: #83b5d7;
+}
