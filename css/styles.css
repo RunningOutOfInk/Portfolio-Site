@@ -140,3 +140,11 @@ button:hover, button:focus {
   display: inline-block;
   margin-left: 15px;
 }
+
+.standard-label__message {
+  vertical-align: top;
+}
+
+table {
+  width: 100%;
+}
