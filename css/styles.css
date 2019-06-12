@@ -81,3 +81,119 @@ button:hover, button:focus {
   background-color: #00476a;
   color: #83b5d7;
 }
+
+/* div {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+} */
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+/* .page-header__logo {
+  width: auto;
+  height: 70px;
+} */
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto; /*Can only auto the horizontal property*/
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.social-media__icon {
+  border-radius: 50%;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.standard-label__message {
+  vertical-align: top;
+}
+
+table {
+  width: 100%;
+}
+
+/* Grid fallback*/
+
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+
+/* Styling CSS grid fallback*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid__item {
+  background-color: LightGrey;
+  padding: 10px;
+  /* Set width to auto*/
+  width: auto;
+}
+
+.grid__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+
+/*Styling CSS grid*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid__item {
+  background-color: lightgray;
+}
+
+.grid__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}

@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  <header>
-    <img src="http://via.placeholder.com/200x70" alt="Placeholder Logo" >
-    <nav>
+  <header class="page-header">
+    <img src="img/logo3.png" alt="Erin Nienhuis Logo" class="page-header__item page-header__logo">
+    <nav class="main-navigation page-header__item">
       <ul role="menubar" class="navigation-list">
         <li role="presentation">
           <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item">Home</a>
@@ -23,6 +23,9 @@
         </li>
         <li role="presentation">
           <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item">Work</a>
         </li>
       </ul>
     </nav>
@@ -37,7 +40,7 @@
   <label for="contact-phone" class="standard-label">Telephone:</label>
   <input type="tel" value="" id="contact-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
   <br>
-  <label for="contact-message" class="standard-label">Message:</label>
+  <label for="contact-message" class="standard-label standard-label__message">Message:</label>
   <textarea id="contact-message" maxlength="240" required></textarea>
   <br>
   <input type="submit" value="Send message">
@@ -55,11 +58,13 @@
     <a href="mailto:erin.nienhuis@gmail.com" target="_blank">Contact Me</a>
   </div>
 
-  <footer>
+  <footer class="page-footer">
     <p>Find me on</p>
-    <img src="img/github_icon.svg" alt="GitHub">
-    <img src="img/twitter_icon.svg" alt="Twitter">
-    <img src="img/linkedin_icon.svg" alt="LinkedIn">
+    <div class="social-media">
+      <img src="http://via.placeholder.com/30x30" alt="GitHub" class="social-media__icon">
+      <img src="http://via.placeholder.com/30x30" alt="Twitter" class="social-media__icon">
+      <img src="http://via.placeholder.com/30x30" alt="LinkedIn" class="social-media__icon">
+    </div>
   </footer>
 
   <script type="text/javascript" src="js/tota11y.min.js"></script>
