@@ -96,11 +96,6 @@ button:hover, button:focus {
   border-radius: 50%;
 }
 
-/* .page-header__logo {
-  width: auto;
-  height: 70px;
-} */
-
 .page-footer {
   clear: both;
   display: flex;
