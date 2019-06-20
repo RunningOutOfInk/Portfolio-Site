@@ -50,6 +50,80 @@ h3 {
   line-height: 1.5;
 }
 
+/* Page Header CSS */
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+/* Navigation CSS */
+
+.navigation-list {
+  list-style-type: none;
+  font: 20px Raleway;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 10px;
+  position: relative;
+}
+
+.navigation-list a {
+  z-index: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #0080bb;
+}
+
+ul.navigation-list a:before, ul.navigation-list a:after
+{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #fff;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+ul.navigation-list a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+ul.navigation-list a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+ul.navigation-list a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
 /* Link CSS */
 
 a {
@@ -71,7 +145,7 @@ a:active {
 
 /* Button CSS */
 
-button {
+button, .button {
   border: none;
   font-family: inherit;
   background-color: #425153;
@@ -80,9 +154,10 @@ button {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s;
 }
 
-button:hover, button:focus {
+button:hover, button:focus, .button:hover, .button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -92,37 +167,10 @@ button:hover, button:focus {
   color: #83b5d7;
 }
 
-/* Page Header CSS */
-
-.page-header {
-  display: flex;
-  width: 100%;
-  padding: 20px;
-}
-
-.page-header__item {
-  flex: 0 1 200px;
-}
-
-.page-header__item:last-child {
-  flex-grow: 1;
-  text-align: right;
-}
-
-/* Navigation CSS */
-
-.navigation-list {
-  list-style-type: none;
-}
-
-.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
-}
 
 /* Profile CSS */
 
-.profile {
+.profile, .about {
   max-width: 700px;
   margin: 0 auto; /*Can only auto the horizontal property*/
   text-align: center;
@@ -155,10 +203,47 @@ button:hover, button:focus {
   vertical-align: top;
 }
 
-/* Table CSS */
+/* SVG Animation CSS */
 
-table {
-  width: 100%;
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+.sun  {
+  animation: 4s color-change infinite alternate linear;
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 /* Grid Fallback CSS */
@@ -185,4 +270,34 @@ table {
 .grid__item:last-child {
   grid-column: 3 / 3;
   grid-row: 1 / 3;
+}
+
+/* Responsive CSS - responsive classes should be at the end of the CSS file */
+
+/* Width Range 0 - 500px */
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Width Range 500 - 750px */
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Width Range 0 - 750px - shared code */
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
 }
