@@ -258,7 +258,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .social-media__icon {
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
 }
 
 /* Form CSS */
