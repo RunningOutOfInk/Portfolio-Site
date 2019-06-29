@@ -88,6 +88,27 @@ h3 {
   object-fit: contain;
 }
 
+/* Link CSS */
+
+a {
+  color: var(--primary-link-color);
+}
+
+a:visited {
+  color: var(--primary-link-color);
+}
+
+/* a:hover comes after a:visited  */
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* a:active comes after a:hover  */
+a:active {
+  color: var(--tertiary-link-color);
+}
+
 /* Navigation CSS */
 
 .navigation-list {
@@ -98,7 +119,7 @@ h3 {
 .navigation-list li {
   display: inline-block;
   margin: 0 10px;
-  padding: 10px 10px;
+  padding: 10px;
   position: relative;
 }
 
@@ -109,63 +130,42 @@ h3 {
   color: var(--tertiary-link-color);
 }
 
-ul.navigation-list a:before, ul.navigation-list a:after
-{
-    position: absolute;
-    top: 22px;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    border: 4px solid var(--white);
-    transform: translateX(-50%) translateY(-50%) scale(0.8);
-    border-radius: 50%;
-    background: transparent;
-    content: "";
-    opacity: 0;
-    transition: all 0.3s;
-    z-index: -1;
+ul.navigation-list a::before,
+ul.navigation-list a::after {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--white);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: -1;
 }
 
-ul.navigation-list a:after
-{
-    border-width: 2px;
-    transition: all 0.4s;
+ul.navigation-list a::after {
+  border-width: 2px;
+  transition: all 0.4s;
 }
 
-ul.navigation-list a:hover:before
-{
-    opacity: 1;
-    transform: translateX(-50%) translateY(-50%) scale(1);
+ul.navigation-list a:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) scale(1);
 }
 
-ul.navigation-list a:hover:after
-{
-    opacity: 1;
-    transform: translateX(-50%) translateY(-50%) scale(1.3);
-}
-
-/* Link CSS */
-
-a {
-  color: var(--primary-link-color);
-}
-
-a:visited {
-  color: var(--primary-link-color);
-}
-/* a:hover comes after a:visited  */
-a:hover, a:focus {
-  text-decoration: none;
-}
-
-/* a:active comes after a:hover  */
-a:active {
-  color: var(--tertiary-link-color);
+ul.navigation-list a:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
 
 /* Button CSS */
 
-button, .button {
+button,
+.button {
   border: none;
   font-family: inherit;
   background-color: var(--secondary-bg-color);
@@ -177,7 +177,10 @@ button, .button {
   transition: opacity 0.2s;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -187,12 +190,12 @@ button:hover, button:focus, .button:hover, .button:focus {
   color: var(--secondary-button-color);
 }
 
-
 /* Profile CSS */
 
-.profile, .about {
+.profile,
+.about {
   max-width: 700px;
-  margin: 0 auto; /*Can only auto the horizontal property*/
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -230,9 +233,11 @@ button:hover, button:focus, .button:hover, .button:focus {
   0% {
     fill: var(--sun-color);
   }
+
   50% {
     fill: var(--secondary-sun-color);
   }
+
   100% {
     fill: var(--tertiary-sun-color);
   }
@@ -242,6 +247,7 @@ button:hover, button:focus, .button:hover, .button:focus {
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -251,11 +257,13 @@ button:hover, button:focus, .button:hover, .button:focus {
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
 }
-.sun  {
+
+.sun {
   animation: 4s color-change infinite alternate linear;
 }
 
@@ -267,13 +275,6 @@ button:hover, button:focus, .button:hover, .button:focus {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-/* Grid Fallback CSS */
-
-.grid__item {
-  display: inline-block;
-  width: 33%;
-}
-
 /* Grid CSS */
 
 .grid {
@@ -283,6 +284,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .grid__item {
+  display: inline-block;
   background-color: var(--grid-bg-color);
   padding: 10px;
   width: auto;
@@ -314,10 +316,12 @@ button:hover, button:focus, .button:hover, .button:focus {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
