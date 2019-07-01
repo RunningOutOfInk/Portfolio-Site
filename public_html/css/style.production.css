@@ -16,7 +16,7 @@ Raleway + Roboto
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -64,20 +64,41 @@ h3 {
 
 .page-header__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   text-align: right;
 }
 
 .page-header__logo {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
+}
+
+/* Link CSS */
+
+a {
+  color: #0080bb;
+}
+
+a:visited {
+  color: #0080bb;
+}
+
+/* a:hover comes after a:visited  */
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* a:active comes after a:hover  */
+a:active {
+  color: #0080bb;
 }
 
 /* Navigation CSS */
@@ -90,7 +111,7 @@ h3 {
 .navigation-list li {
   display: inline-block;
   margin: 0 10px;
-  padding: 10px 10px;
+  padding: 10px;
   position: relative;
 }
 
@@ -101,89 +122,65 @@ h3 {
   color: #0080bb;
 }
 
-ul.navigation-list a:before
-{
-    position: absolute;
-    top: 22px;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    border: 4px solid #fff;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
-        -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
-            transform: translateX(-50%) translateY(-50%) scale(0.8);
-    border-radius: 50%;
-    background: transparent;
-    content: "";
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    z-index: -1;
+ul.navigation-list a::before {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #fff;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
 }
 
-ul.navigation-list a:after
-{
-    position: absolute;
-    top: 22px;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    border: 4px solid #fff;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
-        -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
-            transform: translateX(-50%) translateY(-50%) scale(0.8);
-    border-radius: 50%;
-    background: transparent;
-    content: "";
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    z-index: -1;
+ul.navigation-list a::after {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #fff;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
 }
 
-ul.navigation-list a:after
-{
-    border-width: 2px;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
+ul.navigation-list a::after {
+  border-width: 2px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-ul.navigation-list a:hover:before
-{
-    opacity: 1;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
-        -ms-transform: translateX(-50%) translateY(-50%) scale(1);
-            transform: translateX(-50%) translateY(-50%) scale(1);
+ul.navigation-list a:hover::before {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(1);
+  transform: translateX(-50%) translateY(-50%) scale(1);
 }
 
-ul.navigation-list a:hover:after
-{
-    opacity: 1;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(1.3);
-        -ms-transform: translateX(-50%) translateY(-50%) scale(1.3);
-            transform: translateX(-50%) translateY(-50%) scale(1.3);
-}
-
-/* Link CSS */
-
-a {
-  color: undefined;
-}
-
-a:visited {
-  color: undefined;
-}
-/* a:hover comes after a:visited  */
-a:hover, a:focus {
-  text-decoration: none;
-}
-
-/* a:active comes after a:hover  */
-a:active {
-  color: #0080bb;
+ul.navigation-list a:hover::after {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.3);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(1.3);
+  transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
 
 /* Button CSS */
@@ -216,7 +213,10 @@ button {
   transition: opacity 0.2s;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -226,12 +226,12 @@ button:hover, button:focus, .button:hover, .button:focus {
   color: #83b5d7;
 }
 
-
 /* Profile CSS */
 
-.profile, .about {
+.profile,
+.about {
   max-width: 700px;
-  margin: 0 auto; /*Can only auto the horizontal property*/
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -252,8 +252,8 @@ button:hover, button:focus, .button:hover, .button:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -274,9 +274,11 @@ button:hover, button:focus, .button:hover, .button:focus {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -286,9 +288,11 @@ button:hover, button:focus, .button:hover, .button:focus {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -297,66 +301,64 @@ button:hover, button:focus, .button:hover, .button:focus {
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
-.sun  {
+
+.sun {
   -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
 }
 
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
+  animation: 30s cloud-move infinite alternate linear;
 }
 
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
-/* Grid Fallback CSS */
-
-.grid__item {
-  display: inline-block;
-  width: 33%;
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 /* Grid CSS */
@@ -364,23 +366,48 @@ button:hover, button:focus, .button:hover, .button:focus {
 .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  -ms-grid-rows: 1fr 10px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+
 }
 
 .grid__item {
+  display: inline-block;
   background-color: lightgray;
   padding: 10px;
   width: auto;
 }
 
-.grid__item:last-child {
-  -ms-grid-column: 3;
-  grid-column: 3 / 3;
+.grid__item1 {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
+  -ms-grid-column: 1;
+}
+
+.grid__item2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.grid__item3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.grid__item4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.grid__item5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.grid__item6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
 }
 
 /* Responsive CSS - responsive classes should be at the end of the CSS file */
@@ -389,7 +416,38 @@ button:hover, button:focus, .button:hover, .button:focus {
 @media all and (max-width: 500px) {
   .grid {
     -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .grid__item1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .grid__item2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .grid__item3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+
+  .grid__item4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+
+  .grid__item5 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+
+  .grid__item6 {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
   }
 }
 
@@ -397,7 +455,38 @@ button:hover, button:focus, .button:hover, .button:focus {
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
+    -ms-grid-rows: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .grid__item1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .grid__item2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .grid__item3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .grid__item4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+
+  .grid__item5 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .grid__item6 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
   }
 }
 
@@ -406,10 +495,12 @@ button:hover, button:focus, .button:hover, .button:focus {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }

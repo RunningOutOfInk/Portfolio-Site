@@ -91,11 +91,11 @@ h3 {
 /* Link CSS */
 
 a {
-  color: var(--primary-link-color);
+  color: var(--tertiary-link-color);
 }
 
 a:visited {
-  color: var(--primary-link-color);
+  color: var(--tertiary-link-color);
 }
 
 /* a:hover comes after a:visited  */
