@@ -25,7 +25,6 @@ body {
   font-family: 'Merriweather', serif;
   font-weight: 300;
   line-height: 1.5;
-  color: #0080bb;
 }
 
 /* Headings CSS */
@@ -85,11 +84,11 @@ h3 {
 /* Link CSS */
 
 a {
-  color: #0080bb;
+  color: #006898;
 }
 
 a:visited {
-  color: #0080bb;
+  color: #006898;
 }
 
 /* a:hover comes after a:visited  */
@@ -100,7 +99,7 @@ a:focus {
 
 /* a:active comes after a:hover  */
 a:active {
-  color: #0080bb;
+  color: #006898;
 }
 
 /* Navigation CSS */
@@ -121,7 +120,7 @@ a:active {
   z-index: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #0080bb;
+  color: #006898;
 }
 
 ul.navigation-list a::after,
@@ -356,6 +355,10 @@ button:focus,
   background-color: lightgray;
   padding: 10px;
   width: auto;
+}
+
+.grid__item a {
+  color: #00618e;
 }
 
 .grid__item1 {
