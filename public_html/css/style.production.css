@@ -255,17 +255,13 @@ button:focus,
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
+  height: 100px;
 }
 
 .social-media__icon {
-  width: 30px;
   height: 30px;
-}
-
-/* Form CSS */
-
-.standard-label__message {
-  vertical-align: top;
+  width: 30px;
+  margin: 10px;
 }
 
 /* SVG Animation CSS */
@@ -370,7 +366,6 @@ button:focus,
   -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
   -ms-grid-rows: 1fr 10px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-
 }
 
 .grid__item {
