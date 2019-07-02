@@ -78,6 +78,7 @@ h3 {
 .page-header__logo {
   -o-object-fit: contain;
   object-fit: contain;
+  flex-grow: 0;
 }
 
 /* Link CSS */
