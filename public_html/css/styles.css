@@ -198,54 +198,6 @@ ul.navigation-list a:hover::after {
   margin: 10px;
 }
 
-/* SVG Animation CSS */
-
-@keyframes color-change {
-  0% {
-    fill: var(--sun-color);
-  }
-
-  50% {
-    fill: var(--secondary-sun-color);
-  }
-
-  100% {
-    fill: var(--tertiary-sun-color);
-  }
-}
-
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-.sun {
-  animation: 4s color-change infinite alternate linear;
-}
-
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
 /* Grid CSS */
 
 .grid {
