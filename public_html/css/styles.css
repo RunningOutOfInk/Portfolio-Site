@@ -52,6 +52,7 @@ h1 {
   font-size: 30px;
   font-variant: small-caps;
   line-height: 1.5;
+  margin: 20px;
 }
 
 h2 {
@@ -165,34 +166,6 @@ ul.navigation-list a:hover::after {
   transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
 
-/* Button CSS */
-
-button,
-.button {
-  border: none;
-  font-family: inherit;
-  background-color: var(--button-color);
-  color: var(--offWhite);
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid var(--border-color);
-  transition: opacity 0.2s;
-}
-
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.button__secondary {
-  background-color: var(--primary-button-color);
-  color: var(--secondary-button-color);
-}
-
 /* Profile CSS */
 
 .profile,
@@ -279,9 +252,10 @@ button:focus,
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  -ms-grid-columns: 1fr 10px 1fr;
   -ms-grid-rows: 1fr 10px 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
 }
 
 .grid__item {
@@ -289,6 +263,10 @@ button:focus,
   background-color: lightgray;
   padding: 10px;
   width: auto;
+}
+
+.grid__item-img {
+  width: 85%;
 }
 
 .grid__item a {
